@@ -1,0 +1,41 @@
+CODE:
+
+package matrixadd;
+
+public class Matrixadd {                                                             //Intializing the class Matrixadd
+    public static void main(String[] args) {
+        int rows = 3, columns = 3;
+        int[][] a = { {1, 3, 4}, {2, 4, 3},{3,4,5} };                                //Given input
+        int[][] b = { {1, 3, 4}, {2, 4, 3},{1,2,4} };
+
+        
+        int[][] sum = new int[rows][columns];                                        // Adding Two matrices
+        for(int i = 0; i < rows; i++) {                                              // Looping using FOR loop
+            for (int j = 0; j < columns; j++) {
+                sum[i][j] = a[i][j] + b[i][j];
+            }
+        }
+
+        
+        System.out.println("Sum of two matrices is: ");                             // Displaying the result
+        for(int[] row : sum) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
+            System.out.println();
+        
+    }
+    
+    }
+}
+
+
+OUTPUT:
+
+Sum of two matrices is: 
+2    6    8    
+4    8    6    
+4    6    9    
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+
